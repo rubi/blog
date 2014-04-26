@@ -1,0 +1,108 @@
+// Core variables and mixins
+@import "../plugin/bootstrap/core/variables.less";
+@import "../plugin/bootstrap/core/mixins.less";
+/* * Globals */
+/* * Override Bootstrap's default container. */
+@media (min-width:1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* * Blog name and description */
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 35px;
+  font-weight: normal;
+  border-bottom: 1px dotted #6D6060;
+  padding-bottom: 9px;
+}
+.blog-description {
+  font-size: 25px;
+  color: #000000;
+}
+
+/* * Main column and sidebar layout */
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child, .sidebar-module-inset ul:last-child, .sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+/* * Blog posts */
+.blog-post {
+  margin-bottom: 60px;
+  font-size:15px;
+  >pre {
+    border: none;
+    font-size: 15px;
+    color: #2c353d;
+    background: none;
+  }
+  pre.prettyprint{
+    width:100%;
+    margin:0;
+    padding:10px;
+    font-size:12px;
+    background:url(/static/img/home/prettyprint.png) #FFFFFF repeat;
+    border:none;
+    .border-left-radius(0);
+    .border-top-radius(0);
+    .border-right-radius(0);
+    .border-bottom-radius(0);
+  }
+}
+.blog-post::selection {
+  color: white;
+  background: #33caa6;
+  text-shadow: none;
+}
+#bWorks {
+  width: 100%;
+  height: 65px;
+  background: url(/static/img/home/works_bg.png) repeat-x;
+  position: relative;
+  .transition(height 0.5s ease);
+  overflow: hidden;
+}
+#bWorks .bFeel {
+  width: 959px;
+  height: 64px;
+  background: url(/static/img/home/works_feel_bg.png) no-repeat;
+  position: absolute;
+}
+#bWorks .bIntro {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #ffffff;
+  font: 12px/20px 'arial';
+}
+.bs-callout {
+  margin: 20px 0;
+  padding: 10px;
+  border-left: 3px solid #eee;
+  font-size:14px;
+  h4{
+    font-size:14px;
+    color:#5bc0de;
+  }
+}
+.bs-callout-info {
+  background-color: #f4f8fa;
+  border-color: #5bc0de;
+}
